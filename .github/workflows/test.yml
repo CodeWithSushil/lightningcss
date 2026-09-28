@@ -30,7 +30,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - uses: bahmutov/npm-install@v1.8.32
+      - uses: bahmutov/npm-install@v1.12.1
       - uses: dtolnay/rust-toolchain@stable
       - uses: Swatinem/rust-cache@v2
       - run: yarn build
@@ -44,7 +44,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - uses: bahmutov/npm-install@v1.8.32
+      - uses: bahmutov/npm-install@v1.12.1
       - uses: dtolnay/rust-toolchain@stable
         with:
           targets: wasm32-unknown-unknown
