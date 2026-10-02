@@ -35,7 +35,7 @@ jobs:
       - name: Setup rust target
         run: rustup target add ${{ matrix.target }}
 
-      - uses: bahmutov/npm-install@v1.8.32
+      - uses: bahmutov/npm-install@v1.12.1
       - name: Build release
         run: yarn build-release
         env:
@@ -70,7 +70,7 @@ jobs:
       - name: Setup rust target
         run: rustup target add aarch64-apple-darwin
 
-      - uses: bahmutov/npm-install@v1.8.32
+      - uses: bahmutov/npm-install@v1.12.1
       - name: Build release
         run: yarn build-release
         env:
@@ -154,7 +154,7 @@ jobs:
       - name: Setup rust target
         run: rustup target add ${{ matrix.target }}
 
-      - uses: bahmutov/npm-install@v1.8.32
+      - uses: bahmutov/npm-install@v1.12.1
       - name: Build release
         run: yarn build-release
         env:
@@ -233,7 +233,7 @@ jobs:
         uses: actions/setup-node@v7
         with:
           node-version: 18
-      - uses: bahmutov/npm-install@v1.8.32
+      - uses: bahmutov/npm-install@v1.12.1
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
         with:
@@ -265,7 +265,7 @@ jobs:
       - build-wasm
     steps:
       - uses: actions/checkout@v3
-      - uses: bahmutov/npm-install@v1.8.32
+      - uses: bahmutov/npm-install@v1.12.1
       - name: Download artifacts
         uses: actions/download-artifact@v4
         with:
@@ -304,7 +304,7 @@ jobs:
     name: Release Rust crate
     steps:
       - uses: actions/checkout@v3
-      - uses: bahmutov/npm-install@v1.8.32
+      - uses: bahmutov/npm-install@v1.12.1
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
       - run: cargo login ${CRATES_IO_TOKEN}
